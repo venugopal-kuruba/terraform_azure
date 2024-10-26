@@ -1,5 +1,5 @@
 resource "azurerm_virtual_network" "vnet1" {
-  name = "vnet1"
+  name = "${azurerm_resource_group.devsecops-rg1.name}-vnet1"
   #implicit dependency on Resource group and resources name 
   location            = azurerm_resource_group.devsecops-rg1.location
   resource_group_name = azurerm_resource_group.devsecops-rg1.name
