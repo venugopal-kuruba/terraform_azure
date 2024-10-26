@@ -21,10 +21,21 @@ terraform validate
 terraform plan                  
 terraform apply                         
 
-TERRAFORM
+TERRAFORM Topics:
 
 class:1
+1.terraform providers and resource  sytax
+2.terraform  dependencies
+3.terraform backend and locking
+4.terraform variables
+5.terraform commands ( init,validate,plan,apply,state,deploy)
+6.multiuser terrafrom state file access 
 
-GIT_GITHUB
+GIT_GITHUB topics
 
 class: 1
+1.creating github repo and pushing code
+2.renaming branches
+3.ammend commit msg
+4.git pull vs git git fetch
+5.git ignore

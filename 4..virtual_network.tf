@@ -6,7 +6,8 @@ resource "azurerm_virtual_network" "vnet1" {
   address_space       = ["10.42.0.0/16"]
 
   tags = {
-    env = "Development"
+    env = var.env
+    batch = var.batch
   }
 }
 
