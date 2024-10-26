@@ -3,3 +3,4 @@ terraform_1.9.8_windows_amd64
 .terraform.lock.hcl
 Creds.md
 terraform.tfstate
+terraform.tfstate.backup
