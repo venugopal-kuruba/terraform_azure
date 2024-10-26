@@ -11,7 +11,7 @@ resource "azurerm_subnet" "subnet-2" {
   resource_group_name  = azurerm_resource_group.devsecops-rg1.name
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["10.42.2.0/24"]
-  depends_on           = [azurerm_subnet.subnet-1] #explicit dependency
+  depends_on           = [azurerm_subnet.subnet-1] #explicit dependencys
 }
 
 resource "azurerm_subnet" "subnet-3" {
@@ -28,6 +28,12 @@ resource "azurerm_subnet" "subnet-4" {
   address_prefixes     = ["10.42.4.0/24"]
   depends_on           = [azurerm_subnet.subnet-3] #explicit dependency
 }
-
+resource "azurerm_subnet" "subnet-5" {
+  name                 = "subnet-5"
+  resource_group_name  = azurerm_resource_group.devsecops-rg1.name
+  virtual_network_name = azurerm_virtual_network.vnet1.name
+  address_prefixes     = ["10.42.5.0/24"]
+  depends_on           = [azurerm_subnet.subnet-4] #explicit dependency
+}
 # explicit = will not depend on other resource for creating
 # if we need to add dependency we can use = depends_on [resource_subnet.subnet2]
