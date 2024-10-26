@@ -1,12 +1,6 @@
-variable "batch" {
-    default = "b42"
-}
-variable "env" {
-    default = "Development"
-}
-variable "location" {
-    default = "eastus"
-}
-variable "rg1_name" {
-    default = "devsecops-rg1"
-}
+variable "batch" {}
+variable "env" {}
+variable "location" {}
+variable "rg1_name" {}
+variable "vnet1_address_space" {}
+variable "vnet1_subnets_cidrs" {}

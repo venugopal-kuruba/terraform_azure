@@ -29,7 +29,11 @@ class:1
 3.terraform backend and locking
 4.terraform variables
 5.terraform commands ( init,validate,plan,apply,state,deploy)
-6.multiuser terrafrom state file access 
+6.multiuser terrafrom state file access
+
+class: 2
+1.terraform variable with datasources
+2.datasources
 
 GIT_GITHUB topics
 
@@ -39,3 +43,6 @@ class: 1
 3.ammend commit msg
 4.git pull vs git git fetch
 5.git ignore
+
+class: 2
+1.resloving git confilts

@@ -1,39 +1,15 @@
-resource "azurerm_subnet" "subnet-1" {
-  name                 = "subnet-1"
+resource "azurerm_subnet" "subnets" {
+  count                = 3 # index start from = 0,1,2 
+  name                 = "${azurerm_resource_group.devsecops-rg1.name}-subnet-${count.index + 1}"
   resource_group_name  = azurerm_resource_group.devsecops-rg1.name
   virtual_network_name = azurerm_virtual_network.vnet1.name
-  address_prefixes     = ["10.42.1.0/24"]
-
+  address_prefixes     = [element(var.vnet1_subnets_cidrs, count.index)] #[element(list,index)]
 }
 
-resource "azurerm_subnet" "subnet-2" {
-  name                 = "subnet-2"
-  resource_group_name  = azurerm_resource_group.devsecops-rg1.name
-  virtual_network_name = azurerm_virtual_network.vnet1.name
-  address_prefixes     = ["10.42.2.0/24"]
-  depends_on           = [azurerm_subnet.subnet-1] #explicit dependencys
-}
 
-resource "azurerm_subnet" "subnet-3" {
-  name                 = "subnet-3"
-  resource_group_name  = azurerm_resource_group.devsecops-rg1.name
-  virtual_network_name = azurerm_virtual_network.vnet1.name
-  address_prefixes     = ["10.42.3.0/24"]
-  depends_on           = [azurerm_subnet.subnet-2] #explicit dependency
-}
-resource "azurerm_subnet" "subnet-4" {
-  name                 = "subnet-4"
-  resource_group_name  = azurerm_resource_group.devsecops-rg1.name
-  virtual_network_name = azurerm_virtual_network.vnet1.name
-  address_prefixes     = ["10.42.4.0/24"]
-  depends_on           = [azurerm_subnet.subnet-3] #explicit dependency
-}
-resource "azurerm_subnet" "subnet-5" {
-  name                 = "subnet-5"
-  resource_group_name  = azurerm_resource_group.devsecops-rg1.name
-  virtual_network_name = azurerm_virtual_network.vnet1.name
-  address_prefixes     = ["10.42.5.0/24"]
-  depends_on           = [azurerm_subnet.subnet-4] #explicit dependency
-}
+
+
 # explicit = will not depend on other resource for creating
 # if we need to add dependency we can use = depends_on [resource_subnet.subnet2]
+
+#[element(var.vnet1_subnet_cidrs,count.index)]
