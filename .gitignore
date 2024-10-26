@@ -1,5 +1,1 @@
 terraform_1.9.8_windows_amd64
-.terraform/
-.terraform.lock.hcl
-Creds.md
-terraform.tfstate
