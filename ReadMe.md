@@ -46,3 +46,5 @@ class: 1
 
 class: 2
 1.resloving git confilts
+2.what are branches in git and how it work?
+3.
