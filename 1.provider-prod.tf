@@ -19,14 +19,14 @@ terraform {
     storage_account_name = "devsecopsprodtfstate"
     container_name       = "tfstate"
     key                  = "terraform-prod.tfstate"
-    subscription_id  = "c2980d90-88a1-426d-a251-44302ef6bf9e"
+    subscription_id      = "c2980d90-88a1-426d-a251-44302ef6bf9e"
   }
 }
 
 
 provider "azurerm" {
   features {}
-  subscription_id  = "c2980d90-88a1-426d-a251-44302ef6bf9e"
+  subscription_id = "c2980d90-88a1-426d-a251-44302ef6bf9e"
 }
 provider "aws" {}
 provider "google" {}
