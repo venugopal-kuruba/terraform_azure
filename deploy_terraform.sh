@@ -1,6 +1,6 @@
 #!/bin/bash
 CB=$(git branch --show-current)
-if [ "${CB}"=="dev" ]; then
+if [ "${CB}" == "dev" ]; then
     echo "running terraform on branch ${CB}.."
     rm -rf .terraform
     rm -rf 1.provider-prod.tf
@@ -8,7 +8,7 @@ if [ "${CB}"=="dev" ]; then
     terraform fmt && terraform validate
     terraform plan
     terraform apply --auto-approve
-elif [ "${CB}"=="master" ]; then
+elif [ "${CB}" == "master" ]; then
     echo "running terraform on branch ${CB}.."
     rm -rf .terraform
     rm -rf 0.provider-dev.tf
