@@ -19,7 +19,7 @@ terraform {
     storage_account_name = "devsecopsdevtfstate"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
-    subscription_id = "79185488-0f2c-4fcd-85b2-001db6535fe1"
+    subscription_id      = "79185488-0f2c-4fcd-85b2-001db6535fe1"
   }
 }
 
