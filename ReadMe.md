@@ -34,7 +34,9 @@ class:1
 class: 2                                                            
 1.terraform variable with datasources                                           
 2.datasources 
-3.using backend for dev and prod deployments.                              
+3.using backend for dev and prod deployments. 
+4.create Terraform wrapper to deal with multiple subcriptions based on branch 
+
 
 GIT_GITHUB topics                                                   
 
@@ -51,5 +53,5 @@ class: 2
 3.creating jira user story for changes.                                                         
 4.Understanding Feature branches and Raising Pull Request.                                              
 5.Adding reviewer for approving PR and merge with other branch.                                                 
-
+6.Performing local merge instead of PR.
 
