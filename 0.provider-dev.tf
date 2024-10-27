@@ -16,15 +16,17 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "COMMON_RG"
-    storage_account_name = "devsecopsprodtfstate"
+    storage_account_name = "devsecopsdevtfstate"
     container_name       = "tfstate"
-    key                  = "terraform-prod.tfstate"
+    key                  = "terraform.tfstate"
+    subscription_id = "79185488-0f2c-4fcd-85b2-001db6535fe1"
   }
 }
 
 
 provider "azurerm" {
   features {}
+  subscription_id = "79185488-0f2c-4fcd-85b2-001db6535fe1"
 }
 provider "aws" {}
 provider "google" {}
