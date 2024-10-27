@@ -47,4 +47,8 @@ class: 1
 class: 2
 1.resloving git confilts
 2.what are branches in git and how it work?
-3.
+3.creating jira user story for changes.
+4.Understanding Feature branches and Raising Pull Request.
+5.Adding reviewer for approving PR and merge with other branch.
+
+
