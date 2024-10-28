@@ -70,4 +70,4 @@ class: 4
 3.git cherrypick
 4.git LFS (large file system)
 5.git secerts
-
+6.Restore deleted branch with reflog
