@@ -55,3 +55,19 @@ class: 2
 5.Adding reviewer for approving PR and merge with other branch.                                                 
 6.Performing local merge instead of PR.
 
+class: 3 - Deleting commits
+
+1.git reset: hard, soft , mixed     git reset --hard commit-id (delete bunch)
+2.git revert                        git revet commit-id (removefile but not commit -id)
+3.git interactive rebase            git rebase -i commit-id(drop,reword,squach).
+4.git stash                         git stash file_name
+   git stash pop                    to come out stash 
+   git stash list                   to view list of stash files.
+
+class: 4
+1. git merge
+2.git rebase
+3.git cherrypick
+4.git LFS (large file system)
+5.git secerts
+
